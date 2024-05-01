@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://siteigm.univ-mlv.fr/home/'>Laboratoire d'Informatique Gaspard-Monge</a>. Address. Contacts. Moto. Etc.
 
 profile:
   align: right
@@ -13,13 +13,21 @@ profile:
     <p>123 your address street</p>
     <p>Your City, State 12345</p>
 
-news: true # includes a list of news items
+news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hey there! I'm a Computer Scientist with a passion for research. I'm currently working towards my PhD, but let me take you on a quick journey through my adventures so far.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My journey began at PUC Minas, where I explored the world of computing and its various applications. During this time, I was fortunate to join the IMScience Lab, where I sharpened my skills in image processing techniques, particularly in image reconstruction. Continuing my academic pursuit, I pursued my Master's degree at UNICAMP, focusing on the classification of action videos. There, I delved into using deep learning and extracting high-level features to enhance classification accuracy.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Now, at Université Gustave Eiffel, I'm immersed in my PhD research, specializing in prediction networks and applying them for traffic speed forecasting. Specifically, I'm focusing on leveraging regional topography to predict traffic flow in areas lacking direct traffic information.
+
+In addition to working on these topics, I'm also deeply interested in understanding the capabilities of generative networks. I'm also passionate about brainstorming projects that could benefit various fields like medicine, biology, and safety ... Moreover, my imaginative nature drives me towards exploring creative computing as well.
+
+My ultimate goal is to keep advancing and become a top-notch researcher. I'm determined to use my expertise in computer science and machine learning to uncover new insights and have a positive impact on the world.
+
+
+
+ 
