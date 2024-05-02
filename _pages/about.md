@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://siteigm.univ-mlv.fr/home/'>Laboratoire d'Informatique Gaspard-Monge</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://siteigm.univ-mlv.fr/home/'>Laboratoire d'Informatique Gaspard-Monge</a>.
 
 profile:
   align: right
