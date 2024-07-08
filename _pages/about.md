@@ -22,7 +22,7 @@ Hey there! I'm a Computer Scientist with a passion for research. I'm currently w
 
 My journey began at PUC Minas, where I explored the world of computing and its various applications. During this time, I was fortunate to join the IMScience Lab, where I sharpened my skills in image processing techniques, particularly in image reconstruction. Continuing my academic pursuit, I pursued my Master's degree at UNICAMP, focusing on the classification of action videos. There, I delved into using deep learning and extracting high-level features to enhance classification accuracy.
 
-Now, at Université Gustave Eiffel, I'm immersed in my PhD research, specializing in prediction networks and applying them for traffic speed forecasting. Specifically, I'm focusing on leveraging regional topography to predict traffic flow in areas lacking direct traffic information.
+Now, at Université Gustave Eiffel, I'm immersed in my PhD research, specializing in AI models and prediction networks. Specifically, I'm focusing on leveraging regional topography to predict traffic and travel speed in areas lacking direct mobility information.
 
 In addition to working on these topics, I'm also deeply interested in understanding the capabilities of generative networks. I'm also passionate about brainstorming projects that could benefit various fields like medicine, biology, and safety ... Moreover, my imaginative nature drives me towards exploring creative computing as well.
 
