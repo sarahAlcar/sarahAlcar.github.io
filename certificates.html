@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Adjust page title if needed -->
+    <title>Certificates — Dr. Sarah Carneiro</title>
+    <meta name="description" content="Full list of publications by Sarah Carneiro.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---- Extra styles specific to the publications page ---- */
+
+        /* Year group heading (e.g. "2024", "2023") */
+        .pub-year-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--clr-accent);
+            border-bottom: 2px solid var(--clr-border);
+            padding-bottom: 0.4rem;
+            margin: 2.5rem 0 1.2rem;
+        }
+        .pub-year-heading:first-of-type { margin-top: 0; }
+
+        /* Counter label (e.g. "[1]") */
+        .pub-counter {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--clr-text-3);
+            min-width: 1.8rem;
+            padding-top: 0.15rem;
+        }
+
+        /* Horizontal layout: image | counter + content */
+        .pub-list-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 1.4rem;
+        }
+        /* Stack image above content on tablets/phones (overrides the rule above) */
+        @media (max-width: 900px) {
+            .pub-list-item { grid-template-columns: 1fr; }
+        }
+
+        /* Thumbnail shown for papers without a figure image */
+        .pub-list-img--placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--clr-accent);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================================================================
+     NAVIGATION BAR — "Publications" is active
+     ================================================================ -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Sarah Carneiro</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html"  class="active" >Certificates</a></li>
+            <li><a href="teaching.html" >Teaching</a></li>
+        </ul>
+        <a href="PDFs/CV/CV_Sarah_CARNEIRO.pdf" class="btn-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <!-- Mobile/tablet menu toggle (shown only on narrow screens, see style.css section 13) -->
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i> <span class="nav-toggle-label">Menu</span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     PAGE BANNER
+     ================================================================ -->
+<div class="page-banner">
+    <div class="container">
+        <h1>Certificates</h1>
+        <p> Certifications and specialized training supporting continuous professional development.</p>
+    </div>
+</div>
+
+
+
+<section class="page-content">
+    <div class="container">
+
+        <!-- ============================================================
+             Ongoing certifications
+             ============================================================ -->
+        <h2 class="pub-year-heading">Ongoing</h2>
+
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/CertificateMocs/cs.png" alt="TBA" style="pointer-events: none;">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://www.coursera.org/specializations/bioinformatics" target="_blank" rel="noopener">
+                        Bioinformatics Specialization
+                    </a>
+                </h3>
+                <p class="pub-meta">
+                    <span class="year">2026</span>
+                    <span class="sep">|</span>
+                    <span class="venue">UC San Diego</span>
+                </p>
+                <p class="pub-abstract">
+                    A specialization in computational biology, combining genomics, molecular biology, algorithms, and machine learning. 
+                    The coursework covered genome assembly and sequencing, sequence alignment, evolutionary analysis, clustering, hidden Markov models, 
+                    and computational proteomics, with hands-on applications to real biological datasets, infectious diseases, antibiotic resistance, 
+                    and genetic variation.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Microbiology</span>
+                    <span class="tag">Bioinformatics</span>
+                    <span class="tag">Epidemiology</span>
+                    <span class="tag">Biotechnology</span>
+                </div>
+                <div class="pub-actions">
+                    <!-- <a href="" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Verify →
+                    </a> -->
+                </div>
+            </div>
+        </div>
+
+
+
+
+  
+
+
+        <!-- ============================================================
+             Received
+             ============================================================ -->
+       <h2 class="pub-year-heading">Completed</h2> 
+
+      <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/CertificateMocs/LeadAI.png" alt="TBA" style="pointer-events: none;">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://www.coursera.org/learn/ibm-ai-literacy-business-leaders?specialization=ibm-lead-ai-transformation-strategy-governance-execution" target="_blank" rel="noopener">
+                        AI Literacy for Business Leaders 
+                    </a>
+                </h3>
+                <p class="pub-meta">
+                    <span class="year">2026</span>
+                    <span class="sep">|</span>
+                    <span class="venue">IBM</span>
+                </p>
+                <p class="pub-abstract">
+                    This course is part of IBM Lead AI Transformation: Strategy, Governance & Execution Professional Certificate. Acquired skills: How AI, machine learning, generative AI, and 
+                    agentic AI differ and how they can create value for businesses. I also learned how to identify useful AI opportunities, evaluate whether 
+                    an organization is ready to adopt AI, and consider important responsible AI principles like fairness, transparency, and accountability 
+                    when evaluating real-world use cases.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">AI Literacy</span>
+                    <span class="tag">AI Product Strategy</span>
+                    <span class="tag">Stakeholder Analysis</span>
+                    <span class="tag">Strategic Planning</span>
+                    <span class="tag">Risk Management</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/BG9D3CHL5QN0" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Verify →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/CertificateMocs/GenAI_Certificate.png" alt="GenAI" style="pointer-events: none;">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://www.coursera.org/learn/generative-ai-with-llms" target="_blank" rel="noopener">
+                        Generative AI with Large Language Models
+                    </a>
+                </h3>
+                <p class="pub-meta">
+                    <span class="year">2024</span>
+                    <span class="sep">|</span>
+                    <span class="venue">AWS</span>
+                </p>
+                <p class="pub-abstract">
+                    Generative AI and large language models, covering AI use cases and project lifecycles, model pre-training and fine-tuning, 
+                    evaluation methodologies, reinforcement learning, and the development of LLM-powered applications.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Fine-Tuning</span>
+                    <span class="tag">LLM</span>
+                    <span class="tag">Scalability</span>
+                    <span class="tag">Model Training</span>
+                    <span class="tag">Applications</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://www.coursera.org/account/accomplishments/verify/V2PZAT207SQL" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Verify →
+                    </a>
+                </div>
+            </div>
+        </div>
+       
+
+    </div>
+</section><!-- /page-content -->
+
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-name">Sarah Carneiro</div>
+            <!-- UPDATE: Change role or institution as needed -->
+            <div class="footer-role">Post-doctoral Researcher — École Polytechnique</div>
+        </div>
+        <!-- UPDATE: Match these links to the hero social links above -->
+        <div class="footer-links">
+            <a href="mailto:sarah.alcar@gmail.com">
+                <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- BibTeX modal — required for the BibTeX buttons above -->
+<div class="modal-overlay" id="bibtex-modal" role="dialog" aria-modal="true" aria-label="BibTeX entry">
+    <div class="modal-box">
+        <button class="modal-close-x" onclick="closeModal()" aria-label="Close">&times;</button>
+        <h3>BibTeX</h3>
+        <pre id="bibtex-content"></pre>
+        <div class="modal-footer">
+            <button class="btn-copy" id="btn-copy">Copy BibTeX</button>
+            <button class="btn-close-modal" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

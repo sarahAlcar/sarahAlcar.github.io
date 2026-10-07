@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Adjust title if needed -->
+    <title>Teaching — Dr. Sarah Carneiro</title>
+    <meta name="description" content="Research projects and teaching activities of Sarah Carneiro.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Category label above a group of project cards */
+        .proj-category {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--clr-text);
+            border-bottom: 2px solid var(--clr-border);
+            padding-bottom: 0.4rem;
+            margin: 2.5rem 0 1.2rem;
+        }
+        .proj-category:first-of-type { margin-top: 0; }
+    </style>
+</head>
+<body>
+
+<!-- ================================================================
+     NAVIGATION BAR — "Projects" is active
+     ================================================================ -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Sarah Carneiro</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html" >Certificates</a></li>
+            <li><a href="teaching.html" class="active" >Teaching</a></li>
+        </ul>
+        <a href="PDFs/CV/CV_Sarah_CARNEIRO.pdf" class="btn-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <!-- Mobile/tablet menu toggle (shown only on narrow screens, see style.css section 13) -->
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i> <span class="nav-toggle-label">Menu</span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     PAGE BANNER
+     UPDATE: Edit heading and subtitle below.
+     ================================================================ -->
+<div class="page-banner">
+    <div class="container">
+        <h1>Teaching</h1>
+        <p>250+ hours across AI, machine learning, deep learning, computer vision, optimization, algorithms, and mentoring research projects.</p>
+    </div>
+</div>
+
+<!-- ================================================================
+     CONTENT
+     HOW TO ADD A NEW PROJECT:
+       1. Copy any .project-card block below.
+       2. Fill in: title, year (proj-year), role (proj-role),
+          description, tags, and links.
+       3. Place it under the right .proj-category heading.
+       4. Add/remove .proj-link anchors as needed.
+     ================================================================ -->
+<section class="page-content">
+    <div class="container">
+
+
+        <!-- ============================================================
+             RESEARCH PROJECTS
+             ============================================================ -->
+        <!-- <h2 class="proj-category">Research Projects</h2> -->
+
+        <!-- Teaching card 1 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>AI for Images</h3>
+                <span class="proj-year">2024 · 55h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Theory and practical sessions covering image processing, convolutional neural networks,
+                classification and regression, multi-input/multi-output learning, overfitting,
+                and explainable AI techniques.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">CNNs</span>
+                <span class="tag">Explainable AI</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 2 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>AI & Deep Learning</h3>
+                <span class="proj-year">2023 – 2024 · 36h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on predictive modeling and deep learning, covering
+                linear regression, parameter optimization, gradient descent, neural networks,
+                and model training.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Optimization</span>
+                <span class="tag">Neural Networks</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 3 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>3rd-Year Project Supervision</h3>
+                <span class="proj-year">2023 – 2024 · 44h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Supervised student group projects in computer vision and machine learning, providing
+                technical guidance throughout model development, experimentation, and evaluation.
+                Projects included agricultural disease detection from leaf images and deepfake image
+                classification.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Project Supervision</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Mentoring</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 4 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Optimization & Introduction to AI</h3>
+                <span class="proj-year">2023 – 2024 · 26h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on methods for solving optimization problems, covering array-based
+                programming, black-box optimization, differentiable optimization, and constrained
+                optimization.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Optimization</span>
+                <span class="tag">Black-Box Optimization</span>
+                <span class="tag">Differentiable Optimization</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 5 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Algorithms</h3>
+                <span class="proj-year">2023 – 2024 · 14h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on introductory programming and algorithmic concepts, including variables,
+                C programming, algorithmic structures, and computational complexity.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Algorithms</span>
+                <span class="tag">C</span>
+                <span class="tag">Programming</span>
+                <span class="tag">Complexity</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 6 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>AI & Deep Learning</h3>
+                <span class="proj-year">2021 – 2022 · 33h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on linear regression, parameter optimization,
+                gradient descent, deep learning, and neural network design and training.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Deep Learning</span>
+                <span class="tag">Optimization</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 7 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Deep Learning</h3>
+                <span class="proj-year">2021 – 2022 · 24h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on deep learning applications with a focus on convolutional neural
+                networks, image classification, computer vision, and face recognition.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Deep Learning</span>
+                <span class="tag">CNNs</span>
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Face Recognition</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 8 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Optimization & Introduction to AI</h3>
+                <span class="proj-year">2021 – 2022 · 28h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on optimization techniques, including array-based
+                programming, black-box optimization, differentiable optimization, and constrained
+                optimization.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Optimization</span>
+                <span class="tag">AI</span>
+                <span class="tag">Black-Box Optimization</span>
+                <span class="tag">Constraints</span>
+            </div>
+        </div>
+
+
+        <!-- Teaching card 9 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Algorithm Optimization</h3>
+                <span class="proj-year">2020 – 2021 · 18h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — ESIEE Paris</p>
+            <p>
+                Practical sessions on optimization methods and mathematical programming, covering linear and integer
+                programming, LP relaxation, constraints, the simplex method, and duality theory.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Optimization</span>
+                <span class="tag">Linear Programming</span>
+                <span class="tag">Integer Programming</span>
+                <span class="tag">Duality</span>
+            </div>
+        </div>
+
+          <!-- Teaching card 10 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Introduction to Python Coding</h3>
+                <span class="proj-year">2018 – 2019 · 60h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — UNICAMP</p>
+            <p>
+                Practical sessions covering image processing, convolutional neural networks,
+                classification and regression, multi-input/multi-output learning, overfitting,
+                and explainable AI techniques.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Coding</span>
+                <span class="tag">Python</span>
+            </div>
+        </div>
+                  <!-- Teaching card 11 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Graph Algorithms</h3>
+                <span class="proj-year">2017 · 64h</span>
+            </div>
+            <p class="proj-role">Teaching Assistant — PUC Minas</p>
+            <p>
+                Fundamental graph algorithms covering graph traversal, shortest paths,
+                and minimum spanning trees, with emphasis on algorithmic complexity
+                and implementation.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                 <span class="tag">Graph Algorithms</span>
+                <span class="tag">Optimization</span>
+                <span class="tag">Complexity</span>
+            </div>
+        </div>
+
+
+
+        <!-- ADD MORE TEACHING CARDS HERE -->
+
+
+    </div>
+</section><!-- /page-content -->
+
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-name">Sarah Carneiro</div>
+            <!-- UPDATE: Change role or institution as needed -->
+            <div class="footer-role">Post-doctoral Researcher — École Polytechnique</div>
+        </div>
+        <!-- UPDATE: Match these links to the hero social links above -->
+        <div class="footer-links">
+            <a href="mailto:sarah.alcar@gmail.com">
+                <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

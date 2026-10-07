@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Change page title if your name or role changes -->
+    <title>Dr. Sarah Carneiro — AI Researcher</title>
+    <meta name="description" content="Personal academic website of Sarah Carneiro, PhD Researcher in Multimodal AI at École Polytechnique.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome (icons). CDN from cdnjs — no install needed. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================================================================
+     NAVIGATION BAR
+     UPDATE: Change nav links, brand name, and CV file path here.
+     The active page should have class="active" on its <a> tag.
+     ================================================================ -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <!-- UPDATE: Your name as it should appear top-left -->
+        <a href="index.html" class="nav-logo">Sarah Carneiro</a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+            <li><a href="teaching.html" >Teaching</a></li>
+        </ul>
+
+        <!-- UPDATE: Point href to the correct CV file path -->
+        <a href="PDFs/CV/CV_Sarah_CARNEIRO.pdf" class="btn-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <!-- Mobile/tablet menu toggle (shown only on narrow screens, see style.css section 13) -->
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i> <span class="nav-toggle-label">Menu</span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     HERO SECTION
+     UPDATE:
+       - Profile photo  → Images/ProfilePhoto/profile.jpg (already set)
+       - Label          → "PHD RESEARCHER" text below
+       - Name           → <h1 class="hero-name">
+       - Subtitle       → <p class="hero-subtitle">
+       - Bio paragraph  → <p class="hero-bio">
+       - Email link     → href="mailto:..."
+       - Google Scholar → href="https://scholar.google.com/citations?user=YOUR_ID"
+       - LinkedIn       → href="https://linkedin.com/in/your-profile"
+       - Affiliation logos → <img class="affil-logo"> src attributes
+     ================================================================ -->
+<section class="hero">
+
+    <!-- Decorative flowing wave — right side of hero -->
+    <!-- UPDATE: Remove or replace this SVG with your own decoration -->
+    <svg class="hero-wave" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+            <linearGradient id="wg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#00b8a9" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#1a2535" stop-opacity="0.0"/>
+            </linearGradient>
+        </defs>
+        <!-- Multiple wave curves layered at different depths -->
+        <path d="M600,40 C520,90 430,20 350,70 C270,120 200,50 120,100 C60,135 20,120 0,130" stroke="url(#wg1)" stroke-width="1.5" opacity="0.9"/>
+        <path d="M600,80 C510,130 420,60 340,110 C260,160 190,90 110,140 C55,170 20,160 0,165" stroke="url(#wg1)" stroke-width="1.3" opacity="0.8"/>
+        <path d="M600,120 C500,170 410,100 330,150 C255,198 180,128 100,178 C50,205 18,200 0,205" stroke="url(#wg1)" stroke-width="1.1" opacity="0.75"/>
+        <path d="M600,158 C495,205 405,140 325,188 C250,232 175,165 95,215 C48,242 16,238 0,242" stroke="url(#wg1)" stroke-width="0.9" opacity="0.60"/>
+        <path d="M600,195 C490,240 400,178 320,225 C244,270 170,205 90,252 C44,278 14,275 0,280" stroke="url(#wg1)" stroke-width="0.7" opacity="0.52"/>
+        <path d="M600,230 C488,272 398,215 318,260 C240,304 166,242 86,288 C42,312 12,310 0,315" stroke="url(#wg1)" stroke-width="0.5" opacity="0.46"/>
+
+       
+        <!-- Scattered accent dots -->
+        
+        <!-- Left cluster -->
+        <circle cx="150" cy="50" r="4"   fill="#00b8a9" opacity="0.90"/>
+        <circle cx="115" cy="35" r="2.1" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="135" cy="25" r="3.0" fill="#00b8a9" opacity="0.65"/>
+        <circle cx="170" cy="30" r="1.6" fill="#00b8a9" opacity="0.50"/>
+        <circle cx="190" cy="45" r="2.7" fill="#00b8a9" opacity="0.70"/>
+        <circle cx="125" cy="60" r="1.4" fill="#00b8a9" opacity="0.40"/>
+        <circle cx="175" cy="65" r="3.3" fill="#00b8a9" opacity="0.60"/>
+        <circle cx="105" cy="75" r="2.2" fill="#00b8a9" opacity="0.35"/>
+        <circle cx="140" cy="85" r="2.8" fill="#00b8a9" opacity="0.55"/>
+        <circle cx="165" cy="95" r="1.7" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="195" cy="80" r="2.4" fill="#00b8a9" opacity="0.50"/>
+        <circle cx="90"  cy="50" r="1.5" fill="#00b8a9" opacity="0.30"/>
+        <circle cx="210" cy="60" r="2.0" fill="#00b8a9" opacity="0.40"/>
+
+        <!-- Transition / bridge -->
+        <circle cx="220" cy="38"  r="2.8" fill="#00b8a9" opacity="0.50"/>
+        <circle cx="238" cy="68"  r="1.5" fill="#00b8a9" opacity="0.35"/>
+        <circle cx="255" cy="45"  r="3.9" fill="#00b8a9" opacity="0.65"/>
+        <circle cx="270" cy="82"  r="2.2" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="285" cy="55"  r="1.7" fill="#00b8a9" opacity="0.40"/>
+        <circle cx="275" cy="110" r="4.2" fill="#00b8a9" opacity="0.60"/>
+        <circle cx="295" cy="78"  r="2.6" fill="#00b8a9" opacity="0.50"/>
+        <circle cx="305" cy="125" r="3.5" fill="#00b8a9" opacity="0.65"/>
+        <circle cx="265" cy="155" r="1.4" fill="#00b8a9" opacity="0.30"/>
+        <circle cx="290" cy="170" r="2.9" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="315" cy="150" r="1.9" fill="#00b8a9" opacity="0.40"/>
+        <circle cx="245" cy="190" r="2.3" fill="#00b8a9" opacity="0.35"/>
+        <circle cx="280" cy="205" r="4.0" fill="#00b8a9" opacity="0.55"/>
+        <circle cx="310" cy="220" r="1.6" fill="#00b8a9" opacity="0.35"/>
+
+        <!-- Main right cluster -->
+        <circle cx="480" cy="60"  r="4.3" fill="#00b8a9" opacity="0.90"/>
+        <circle cx="390" cy="30"  r="3.0" fill="#00b8a9" opacity="0.75"/>
+        <circle cx="540" cy="150" r="2.1" fill="#00b8a9" opacity="0.65"/>
+        <circle cx="310" cy="95"  r="3.4" fill="#00b8a9" opacity="0.80"/>
+        <circle cx="440" cy="200" r="2.4" fill="#00b8a9" opacity="0.40"/>
+        <circle cx="360" cy="165" r="1.8" fill="#00b8a9" opacity="0.55"/>
+        <circle cx="510" cy="260" r="3.1" fill="#00b8a9" opacity="0.90"/>
+        <circle cx="270" cy="230" r="2.0" fill="#1a2535" opacity="0.30"/>
+        <circle cx="580" cy="320" r="1.7" fill="#00b8a9" opacity="0.40"/>
+        <circle cx="420" cy="310" r="2.6" fill="#00b8a9" opacity="0.65"/>
+
+        <!-- Additional scattered points -->
+        <circle cx="350" cy="70"  r="2.5" fill="#00b8a9" opacity="0.55"/>
+        <circle cx="410" cy="85"  r="3.7" fill="#00b8a9" opacity="0.70"/>
+        <circle cx="460" cy="110" r="1.5" fill="#00b8a9" opacity="0.50"/>
+        <circle cx="500" cy="95"  r="2.8" fill="#00b8a9" opacity="0.65"/>
+        <circle cx="330" cy="125" r="2.0" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="380" cy="130" r="4.1" fill="#00b8a9" opacity="0.75"/>
+        <circle cx="430" cy="145" r="2.3" fill="#00b8a9" opacity="0.60"/>
+        <circle cx="470" cy="175" r="3.2" fill="#00b8a9" opacity="0.50"/>
+        <circle cx="520" cy="190" r="1.8" fill="#00b8a9" opacity="0.70"/>
+        <circle cx="350" cy="200" r="1.4" fill="#00b8a9" opacity="0.40"/>
+        <circle cx="400" cy="225" r="2.7" fill="#00b8a9" opacity="0.55"/>
+        <circle cx="450" cy="240" r="3.6" fill="#00b8a9" opacity="0.65"/>
+        <circle cx="480" cy="280" r="2.1" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="550" cy="250" r="2.9" fill="#00b8a9" opacity="0.50"/>
+
+        <!-- A few larger anchors -->
+        <circle cx="335" cy="105" r="4" fill="#00b8a9" opacity="0.72"/>
+        <circle cx="425" cy="65"  r="2.0" fill="#00b8a9" opacity="0.55"/>
+        <circle cx="455" cy="155" r="4" fill="#00b8a9" opacity="0.48"/>
+        <circle cx="500" cy="220" r="2.5" fill="#00b8a9" opacity="0.60"/>
+        <circle cx="375" cy="260" r="3" fill="#00b8a9" opacity="0.45"/>
+        <circle cx="535" cy="285" r="1.6" fill="#00b8a9" opacity="0.35"/>
+
+
+    </svg>
+
+    <div class="hero-inner">
+
+        <!-- Profile photo (circular) -->
+        <!-- UPDATE: Replace src with a new photo at the same path,
+                     or change the path to wherever your photo lives -->
+        <div class="hero-photo">
+            <img src="Images/ProfilePhoto/profile.jpg" style="pointer-events: none;">
+        </div>
+
+        <div class="hero-content">
+            <!-- UPDATE: Change label, name, and subtitle as needed -->
+            <p class="hero-label">PhD.</p>
+            <h1 class="hero-name">Sarah Carneiro</h1>
+            <p class="hero-subtitle">Multimodal AI for Science, Biomedicine &amp; Applications</p>
+
+            <!-- UPDATE: Edit this paragraph to describe your work -->
+            <p class="hero-bio">
+                 I am a postdoctoral researcher at the Laboratoire d’Informatique de l’École Polytechnique (LIX), 
+                where I develop multimodal and generative AI methods for scientific and biomedical research. I received my Ph.D. in Signal, Image Processing, 
+                and Automation from UGE, where I conducted my doctoral research within the A3SI team at the Laboratoire d’Informatique Gaspard-Monge (LIGM).
+            </p>
+            <p class="hero-bio">
+                My research interests span multimodal learning, scientific machine learning, computer vision, and generative modeling, 
+                with a particular emphasis on developing reliable, controllable, and computationally efficient AI systems for scientific discovery. 
+                I am also interested in bridging research and industry, exploring how AI and scientific advances can be translated into practical 
+                technologies and impactful real-world applications.
+            </p>
+
+            <!-- UPDATE: Replace href values with your actual links -->
+            <div class="hero-socials">
+                <a href="mailto:sarah.alcar@gmail.com" class="social-link">
+                    <i class="fa-regular fa-envelope"></i> Email
+                </a>
+                <!-- UPDATE: Replace with your Google Scholar profile URL -->
+                <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" class="social-link" target="_blank" rel="noopener">
+                    <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+                </a>
+                <!-- UPDATE: Replace with your LinkedIn profile URL -->
+                <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" class="social-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <p style="font-size:0.8rem; font-weight:500; line-height:1.4; color:#a0a0a0;">
+                    7+ years of research experience
+                </p>
+            </div>
+        </div>
+    </div><!-- /hero-inner -->
+
+    <!-- Affiliation logos — bottom-right of the hero -->
+    <!-- UPDATE: Replace logo src with your actual lab/institution logos.
+                 Add or remove <img> tags as needed. -->
+    <div class="hero-affiliations">
+        <span class="affil-label">Affiliations</span>
+        <a href="https://www.lix.polytechnique.fr/dascim/" target="_blank" rel="noopener">
+            <img class="affil-logo" src="Images/Logos/Logo_DaSciM.png"
+                 alt="DASciM — Data Science &amp; Mining Lab">
+        </a>
+        <a href="https://www.polytechnique.edu" target="_blank" rel="noopener" style="font-size:0.9rem; font-weight:500; line-height:1.4; color:#1b0b92;">
+            <img class="affil-logo" src="Images/Logos/Logo_Polytechnique.png"
+               alt="École Polytechnique">
+        </a>
+    </div>
+
+</section><!-- /hero -->
+
+
+<!-- ================================================================
+     RESEARCH INTERESTS SECTION
+     UPDATE: Edit the four .research-card blocks below.
+             To add a 5th card, copy one block and increment the
+             card-num.  Also update the grid in CSS (style.css)
+             if you want more than 4 columns.
+             For the full research page → research.html
+     ================================================================ -->
+<section class="research-section">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Research Interests</h2>
+                <div class="section-bar"></div>
+            </div>
+            <a href="research.html" class="see-more">Learn more about my interests →</a>
+        </div>
+
+        <div class="research-grid">
+
+            <!-- Research card 1 — UPDATE: icon (fa-* class), title, description, tags -->
+            <div class="research-card">
+                <!-- <span class="card-num">01</span> -->
+                <div class="card-icon"><i class="fa-solid fa-diagram-project"></i></div>
+                <h3>Multimodal AI</h3>
+                <p> Heterogeneous modalities,
+                   alignment, information balancing, and identifying complementary sources of information.
+                </p>
+                <!-- <div class="tags">
+                    <span class="tag">Cross-Modal Alignment</span>
+                    <span class="tag">Information Fusion</span>
+                    <span class="tag">Reliable AI</span>
+                </div> -->
+            </div>
+
+            <!-- Research card 2 -->
+            <div class="research-card">
+                <!-- <span class="card-num">02</span> -->
+                <div class="card-icon"><i class="fa-solid fa-dna"></i></div>
+                <h3>Biomedical AI</h3>
+                <p>Biochemical function prediction, curation of scientific datasets, drug design, and low-homology.</p>
+                <!-- <div class="tags">
+                    <span class="tag">Medical Imaging</span>
+                    <span class="tag">Computational Biology</span>
+                </div> -->
+            </div>
+
+            <!-- Research card 3 -->
+            <div class="research-card">
+                <!-- <span class="card-num">03</span> -->
+                <div class="card-icon"><i class="fa-regular fa-eye"></i></div>
+                <h3>Computer Vision</h3>
+                <p>Image and video understanding, object detection, image analysis, diffusion.</p>
+                <!-- <div class="tags">
+                   <span class="tag">Image Understanding</span>
+                    <span class="tag">Video Analysis</span>
+                    <span class="tag">Vision Models</span>
+                    <span class="tag">Diffusion</span>
+                </div> -->
+            </div>
+
+            <!-- Research card 4 -->
+            <div class="research-card">
+                <!--<span class="card-num">04</span>-->
+                <div class="card-icon"><i class="fa-solid fa-cube"></i></div>
+                <h3>Generative AI</h3>
+                <p>Large language models, generative models, cultural unbiasing, and frugal AI.</p>
+                <!-- <div class="tags">
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Generative Models</span>
+                </div> -->
+            </div>
+
+        </div><!-- /research-grid -->
+    </div>
+</section><!-- /research-section -->
+
+
+<!-- ================================================================
+     SELECTED PUBLICATIONS SECTION
+     UPDATE: Each .pub-card below is one paper.
+       - .pub-img-wrap img → path to the paper figure image
+       - .pub-title a href → link to the paper (arXiv / DOI / etc.)
+       - .pub-authors      → author list; wrap YOUR name in <strong class="self">
+       - .pub-meta         → year and venue
+       - .pub-abstract     → short description
+       - .pub-action[href] → Paper link, Code link (GitHub), etc.
+       - data-bibtex="..."→ key in js/main.js bibtexEntries object
+     Full publication list → publications.html
+     ================================================================ -->
+<section class="publications-section">
+    <div class="container">
+
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Selected Publications</h2>
+                <div class="section-bar"></div>
+            </div>
+            <a href="publications.html" class="see-more">View all publications →</a>
+        </div>
+
+        <div class="pub-grid">
+
+            <!-- ---- Publication 1: PPI2Text (2026) ---- -->
+            <div class="pub-card">
+                <div class="pub-img-wrap">
+                    <img src="Images/SelectedPublications/PPI2Text.png"
+                         alt="PPI2Text paper figure">
+                </div>
+                <div class="pub-body">
+                    <!-- UPDATE: Replace href with the arXiv or publisher URL -->
+                    <h3 class="pub-title">
+                        <a href="https://arxiv.org/abs/2605.08924" target="_blank" rel="noopener">
+                            PPI2Text: Captioning Protein-Protein Interactions with Coordinate-Aligned Pair-Map Decoding
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        X. Fei, <strong class="self">S.A. Carneiro</strong>, Y. Zhang,
+                        L.P. Petalidis, A. Tsortos, C. Bouyioukos, …
+                    </p>
+                    <p class="pub-meta">
+                        <span class="year">2026</span>
+                        <span class="sep">|</span>
+                        <span class="venue">arXiv</span>
+                    </p>
+                    <p class="pub-abstract">
+                        A coordinate-aligned decoding approach to predict protein-protein interactions
+                        using structural pair maps and multimodal learning.
+                    </p>
+                    <div class="pub-tags">
+                        <span class="tag">Protein Interaction</span>
+                        <span class="tag">Multimodal AI</span>
+                    </div>
+                    <div class="pub-actions">
+                        <a href="https://arxiv.org/abs/2605.08924" class="pub-action" target="_blank" rel="noopener">
+                            <i class="fa-regular fa-file-lines"></i> Paper
+                        </a>
+                        <a href="https://github.com/ColinFX/PPI2Text" class="pub-action" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-rotate"></i> Code
+                        </a>
+                        <button class="pub-action" data-bibtex="ppi2text2026">
+                            <i class="fa-regular fa-file-code"></i> BibTeX
+                        </button>
+                        <span class="pub-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div><!-- /pub-card 1 -->
+
+
+            <!-- ---- Publication 2: Prot2Text-V2 (2025) ---- -->
+            <div class="pub-card">
+                <div class="pub-img-wrap">
+                    <img src="Images/SelectedPublications/Prot2Text-V2.png"
+                         alt="Prot2Text-V2 paper figure">
+                </div>
+                <div class="pub-body">
+                    <!-- UPDATE: Replace href with the arXiv or publisher URL -->
+                    <h3 class="pub-title">
+                        <a href="https://arxiv.org/abs/2505.11194" target="_blank" rel="noopener">
+                            Prot2Text-V2: Protein Function Prediction with Multimodal Contrastive Alignment
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        X. Fei, M. Chatzianastasis, <strong class="self">S.A. Carneiro</strong>,
+                        H. Abdine, L.P. Petalidis, M. Vazirgiannis
+                    </p>
+                    <p class="pub-meta">
+                        <span class="year">2025</span>
+                        <span class="sep">|</span>
+                        <span class="venue">NeurIPS</span>
+                    </p>
+                    <p class="pub-abstract">
+                        A multimodal contrastive framework for protein function prediction by aligning
+                        structural, sequence and textual information.
+                    </p>
+                    <div class="pub-tags">
+                        <span class="tag">Protein</span>
+                        <span class="tag">Multimodal AI</span>
+                    </div>
+                    <div class="pub-actions">
+                        <a href="https://arxiv.org/abs/2505.11194" class="pub-action" target="_blank" rel="noopener">
+                            <i class="fa-regular fa-file-lines"></i> Paper
+                        </a>
+                        <a href="https://github.com/ColinFX/Prot2Text-V2/" class="pub-action" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-rotate"></i> Code
+                        </a>
+                        <button class="pub-action" data-bibtex="prot2text2025">
+                            <i class="fa-regular fa-file-code"></i> BibTeX
+                        </button>
+                        <span class="pub-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div><!-- /pub-card 2 -->
+
+
+            <!-- ---- Publication 3: SWMLP (2023) ---- -->
+            <div class="pub-card">
+                <div class="pub-img-wrap">
+                    <img src="Images/SelectedPublications/SWMLP.png"
+                         alt="SWMLP paper figure">
+                </div>
+                <div class="pub-body">
+                    <h3 class="pub-title">
+                        <a href="https://arxiv.org/abs/2310.02282" target="_blank" rel="noopener">
+                            SWMLP: Shared Weight Multilayer Perceptron for Car Trajectory Speed Prediction using Road Topographical Features
+                        </a>
+                    </h3>
+                    <p class="pub-authors">
+                        <strong class="self">S.A. Carneiro</strong>, G. Chierchia, J. Charléty,
+                        A. Chataignon, L. Najman
+                    </p>
+                    <p class="pub-meta">
+                        <span class="year">2023</span>
+                        <span class="sep">|</span>
+                        <span class="venue">MT-ITS</span>
+                    </p>
+                    <p class="pub-abstract">
+                        A speed prediction method independent of large historical speed data, using
+                        the road topographical features of a vehicle's trajectory.
+                    </p>
+                    <div class="pub-tags">
+                        <span class="tag">Traffic Prediction</span>
+                        <span class="tag">Urban Mobility</span>
+                    </div>
+                    <div class="pub-actions">
+                        <a href="https://arxiv.org/abs/2310.02282" class="pub-action" target="_blank" rel="noopener">
+                            <i class="fa-regular fa-file-lines"></i> Paper
+                        </a>
+                        <!-- UPDATE: Replace href="#" with GitHub repo URL (or remove this link) -->
+                        <button class="pub-action" data-bibtex="swmlp2023">
+                            <i class="fa-regular fa-file-code"></i> BibTeX
+                        </button>
+                        <span class="pub-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div><!-- /pub-card 3 -->
+
+
+            <!-- ---- Publication 4: Fight Detection (2019) ----  -->
+            <div class="pub-card">
+                <!-- UPDATE: Change src to the paper's teaser/figure image -->
+                <div class="pub-img-wrap">
+                    <img src="Images/SelectedPublications/fightDetectionCNNs.png"
+                         alt="Fight detection paper figure">
+                </div>
+                <div class="pub-body">
+                    <!-- UPDATE: Change href to the actual paper URL (e.g. IEEE, arXiv) -->
+                    <h3 class="pub-title">
+                        <a href="#" target="_blank" rel="noopener">
+                            Fight detection in video sequences based on multi-stream convolutional neural networks
+                        </a>
+                    </h3>
+                    <!-- UPDATE: Bold your own name with <strong class="self"> -->
+                    <p class="pub-authors">
+                        <strong class="self">S.A. Carneiro</strong>, G.P. da Silva, S.J.F. Guimarães, H. Pedrini
+                    </p>
+                    <p class="pub-meta">
+                        <span class="year">2019</span>
+                        <span class="sep">|</span>
+                        <span class="venue">SIBGRAPI Conference</span>
+                    </p>
+                    <p class="pub-abstract">
+                        A multi-stream CNN approach for automatic detection of fight events in video sequences,
+                        combining spatial and temporal information.
+                    </p>
+                    <div class="pub-tags">
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Video Understanding</span>
+                    </div>
+                    <div class="pub-actions">
+                        <!-- UPDATE: Replace href="#" with the real paper URL -->
+                        <a href="#" class="pub-action" target="_blank" rel="noopener">
+                            <i class="fa-regular fa-file-lines"></i> Paper
+                        </a>
+                        <!-- data-bibtex must match a key in js/main.js bibtexEntries -->
+                        <button class="pub-action" data-bibtex="fight2019">
+                            <i class="fa-regular fa-file-code"></i> BibTeX
+                        </button>
+                        <span class="pub-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div><!-- /pub-card 4
+
+        </div><!-- /pub-grid -->
+    </div>
+</section><!-- /publications-section -->
+
+
+<!-- ================================================================
+     SUPERVISION & TEACHING  +  EXTRA-CURRICULAR
+     UPDATE: Edit the <li> items in the supervision list.
+             Edit each .extra-item block for new activities.
+     ================================================================ -->
+<section class="bottom-sections">
+    <div class="container">
+        <div class="bottom-grid">
+
+            <!-- LEFT: Supervision & Teaching -->
+            <div class="supervision-col">
+                <!-- icon next to title is optional — remove <i> if you prefer plain -->
+                <h2 class="section-title" style="font-size:1.2rem; font-weight:800; line-height:1.4; ">
+                    <!-- <i class="fa-solid fa-user-group" style="font-size:1.3rem;color:var(--clr-accent);margin-right:0.5rem;vertical-align:middle;"></i> -->
+                    Projects &amp; Supervision 
+                </h2>
+                <div class="section-bar"></div>
+
+                <!-- UPDATE: Add/remove/edit bullet points here -->
+                <ul class="supervision-list">
+                    <li>Agentic AI & Constrained LLM Generation</li>
+                    <li>Vision-Language Models for Medical Imaging</li>
+                    <li>LLM Benchmarking & Quantization</li>
+                    <li>Synthetic Data Generation</li>
+                    <li>Deepfake Detection</li>
+                    <li>Agricultural Disease Detection & Classification</li>
+                </ul>
+
+                <a href="projects.html" class="see-more-inline">See more →</a>
+            </div><!-- /supervision-col -->
+
+            <!-- RIGHT: Extra-curricular -->
+            <div class="extra-col">
+                <h3 class="section-title" style="font-size:1.2rem; font-weight:800; line-height:1.4; ">
+                    <!-- <i class="fa-solid fa-star" style="font-size:1.1rem;color:var(--clr-accent);margin-right:0.5rem;vertical-align:middle;"></i> -->
+                    Academic Engagement, Awards & Outreach
+                </h3>
+                <div class="section-bar"></div>
+
+                <!-- UPDATE: Add/edit extra-curricular items below.
+                             fa-* icon class sets the icon.
+                             h4 = title, p = short description. -->
+                <div class="extra-item">
+                    <!-- <div class="extra-icon-box">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div> -->
+                    <div class="extra-info">
+                        <h4>Symposium on Generative AI for Biochemistry and Health</h4>
+                        <p>Member of the scientific commitee. Speaker outreach, and event organization. </p>
+                         <a href="https://hi-paris.fr/research/symposium/" class="see-more-inline">See event →</a>
+                    </div>
+                </div>
+
+                <div class="extra-item">
+                    <!-- <div class="extra-icon-box">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                    </div> -->
+                    <div class="extra-info">
+                        <h4>Talks</h4>
+                        <p>Bio Foundational Models: Extracting and decoding patterns - PUC Minas - 2026</p>
+                    </div>
+                </div>
+
+                <div class="extra-item">
+                    <!-- <div class="extra-icon-box">
+                        <i class="fa-regular fa-rectangle-list"></i>
+                    </div> -->
+                    <div class="extra-info">
+                        <h4>Prizes</h4>
+                        <p>Third place for the best bachelor’s thesis award in computer science PUC MG.</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- ADD MORE EXTRA-CURRICULAR ITEMS HERE by copying a .extra-item block -->
+
+            </div><!-- /extra-col -->
+
+        </div><!-- /bottom-grid -->
+    </div>
+</section><!-- /bottom-sections -->
+
+
+<!-- ================================================================
+     FOOTER
+     UPDATE: Change name, role, and social link hrefs.
+     ================================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-name">Sarah Carneiro</div>
+            <!-- UPDATE: Change role or institution as needed -->
+            <div class="footer-role">Post-doctoral Researcher — École Polytechnique</div>
+        </div>
+        <!-- UPDATE: Match these links to the hero social links above -->
+        <div class="footer-links">
+            <a href="mailto:sarah.alcar@gmail.com">
+                <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- ================================================================
+     BIBTEX MODAL (shared — do not remove)
+     The modal is opened by any button with data-bibtex="<key>".
+     The BibTeX text is stored in js/main.js → bibtexEntries.
+     ================================================================ -->
+<div class="modal-overlay" id="bibtex-modal" role="dialog" aria-modal="true" aria-label="BibTeX entry">
+    <div class="modal-box">
+        <button class="modal-close-x" onclick="closeModal()" aria-label="Close">&times;</button>
+        <h3>BibTeX</h3>
+        <pre id="bibtex-content"></pre>
+        <div class="modal-footer">
+            <button class="btn-copy" id="btn-copy">Copy BibTeX</button>
+            <button class="btn-close-modal" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

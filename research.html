@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Adjust page title if needed -->
+    <title>Research — Dr. Sarah Carneiro</title>
+    <meta name="description" content="Research areas of Sarah Carneiro: Multimodal AI, Biomedical AI, Computer Vision, Generative AI.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================================================================
+     NAVIGATION BAR
+     UPDATE: "active" class is on "Research" here.
+     ================================================================ -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Sarah Carneiro</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html" class="active">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html" >Certificates</a></li>
+            <li><a href="teaching.html" >Teaching</a></li>
+        </ul>
+        <a href="PDFs/CV/CV_Sarah_CARNEIRO.pdf" class="btn-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <!-- Mobile/tablet menu toggle (shown only on narrow screens, see style.css section 13) -->
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i> <span class="nav-toggle-label">Menu</span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     PAGE BANNER
+     UPDATE: Edit the heading and subtitle description below.
+     ================================================================ -->
+<div class="page-banner">
+    <div class="container">
+        <h1>Research</h1>
+        <p>
+           My research focuses on multimodal AI for scientific discovery and applications, 
+           developing models that reason across images, graphs, signals, sequences, and text. 
+           I am interested in reliable AI for scientific discovery, with additional interests in 
+           frugal AI and model efficiency.
+        </p>
+    </div>
+</div>
+
+
+<!-- ================================================================
+     RESEARCH AREAS
+     UPDATE: Add, remove, or edit .research-area blocks below.
+             Each block has an icon, title, description, bullet list,
+             and keyword tags.  The icon is a Font Awesome class.
+     ================================================================ -->
+<section class="page-content">
+    <div class="container">
+
+        <!-- Overview paragraph -->
+        <!-- UPDATE: Replace this with your own research statement -->
+        <p style="font-size:0.95rem;color:var(--clr-text-2);line-height:1.8;max-width:760px;margin-bottom:2.5rem;">
+        </p>
+
+        <!-- ---- Research Area 1 ---- -->
+        <!-- UPDATE: Change icon (fa-* class), title, paragraphs, bullets, and tags -->
+        <div class="research-area">
+            <div class="research-area-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <div>
+                <h3>Multimodal AI</h3>
+                <p>
+                    Developing models with multimodal representation learning methods
+                    that align information across heterogeneous data sources. My work on cross-modal alignment
+                    enables models to jointly reason over data such as : images, sequences, text,
+                    and graphs.
+                </p>
+                <ul>
+                    <li>Vision and Language models pre-training
+                    <li>Modality Alignment</li>
+                    <li>Uncertainty quantification and calibration</li>
+                    <li>Scientific discovery</li>
+                </ul>
+                <div>
+                    <span class="tag">VLMs</span>
+                    <span class="tag">Multimodal Learning</span>
+                    <span class="tag">Contrastive Learning</span>
+                    <span class="tag">Cross-modal Alignment</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- Research Area 2 ---- -->
+        <div class="research-area">
+            <div class="research-area-icon"><i class="fa-solid fa-dna"></i></div>
+            <div>
+                <h3>Biomedical AI</h3>
+                <p>
+                    AI methods to biomedical challenges, including protein function prediction,
+                    protein-protein interaction analysis, and medical image understanding. My research
+                    leverages biological data, sequence encoders, and large language
+                    models to advance scientific discovery.
+                </p>
+                <ul>
+                    <li>Multimodal biomolecular structure representation and understanding</li>
+                    <li>Structure-aware modelling of biomolecular interactions</li>
+                    <li>Generative design and property prediction for biomolecules</li>
+                </ul>
+                <div>
+                    <span class="tag">Medical Imaging</span>
+                    <span class="tag">Computational Biology</span>
+                    <span class="tag">Proteomics</span>
+                    <span class="tag">Drug Design</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- Research Area 3 ---- -->
+        <div class="research-area">
+            <div class="research-area-icon"><i class="fa-regular fa-eye"></i></div>
+            <div>
+                <h3>Computer Vision</h3>
+                <p>
+                    Developing and improving AI methods for image and video understanding,
+                    with a focus on scientific and engineering applications. Exploring
+                    visual representation learning, spatiotemporal modelling, and generative
+                    approaches such as diffusion models for analysis, prediction, and discovery.
+                </p>
+                <ul>
+                    <li>Image and video understanding</li>
+                    <li>Spatiotemporal modelling and motion analysis</li>
+                    <li>Visual representation learning</li>
+                    <li>Diffusion and generative models</li>
+                    <li>Scientific and engineering vision applications</li>
+                </ul>
+                <div>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Video Understanding</span>
+                    <span class="tag">Spatiotemporal AI</span>
+                    <span class="tag">Diffusion Models</span>
+                    <span class="tag">Scientific AI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- Research Area 4 ---- -->
+        <div class="research-area">
+            <div class="research-area-icon"><i class="fa-solid fa-cube"></i></div>
+            <div>
+                <h3>Responsible & Frugal Generative AI</h3>
+                <p>
+                    I am interested in developing reliable, controllable, and resource-efficient
+                    generative AI methods for scientific discovery, exploring how these models can
+                    be made more trustworthy, data-efficient, and computationally sustainable.
+                </p>
+                <ul>
+                    <li>Reliable and controllable LLMs for science</li>
+                    <li>Scientific generation and multimodal captioning</li>
+                    <li>Human-in-the-loop synthetic data generation and validation</li>
+                    <li>Gen AI designed around limited compute/data/energy</li>
+                </ul>
+                <div>
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Generative Models</span>
+                    <span class="tag">LoRA</span>
+                    <span class="tag">Scientific AI</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADD NEW RESEARCH AREA HERE by copying a .research-area block above -->
+
+        <!-- Link to publications -->
+
+        <p style="margin-top:2rem;font-size:0.9rem;color:var(--clr-text-2);">
+            Interested in ongoing projects ?
+            <a href="projects.html" style="color:var(--clr-accent);font-weight:500;">
+                View the list →
+            </a>
+        </p>
+
+
+    </div>
+</section><!-- /page-content -->
+
+
+<!-- ================================================================
+     FOOTER — same across all pages
+     ================================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-name">Sarah Carneiro</div>
+            <!-- UPDATE: Change role or institution as needed -->
+            <div class="footer-role">Post-doctoral Researcher — École Polytechnique</div>
+        </div>
+        <!-- UPDATE: Match these links to the hero social links above -->
+        <div class="footer-links">
+            <a href="mailto:sarah.alcar@gmail.com">
+                <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

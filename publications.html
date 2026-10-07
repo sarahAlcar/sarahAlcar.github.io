@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Adjust page title if needed -->
+    <title>Publications — Dr. Sarah Carneiro</title>
+    <meta name="description" content="Full list of publications by Sarah Carneiro.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ---- Extra styles specific to the publications page ---- */
+
+        /* Year group heading (e.g. "2024", "2023") */
+        .pub-year-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--clr-accent);
+            border-bottom: 2px solid var(--clr-border);
+            padding-bottom: 0.4rem;
+            margin: 2.5rem 0 1.2rem;
+        }
+        .pub-year-heading:first-of-type { margin-top: 0; }
+
+        /* Counter label (e.g. "[1]") */
+        .pub-counter {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--clr-text-3);
+            min-width: 1.8rem;
+            padding-top: 0.15rem;
+        }
+
+        /* Horizontal layout: image | counter + content */
+        .pub-list-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 1.4rem;
+        }
+        /* Stack image above content on tablets/phones (overrides the rule above) */
+        @media (max-width: 900px) {
+            .pub-list-item { grid-template-columns: 1fr; }
+        }
+
+        /* Thumbnail shown for papers without a figure image */
+        .pub-list-img--placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--clr-accent);
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================================================================
+     NAVIGATION BAR — "Publications" is active
+     ================================================================ -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Sarah Carneiro</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="certificates.html" >Certificates</a></li>
+            <li><a href="teaching.html" >Teaching</a></li>
+        </ul>
+        <a href="PDFs/CV/CV_Sarah_CARNEIRO.pdf" class="btn-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <!-- Mobile/tablet menu toggle (shown only on narrow screens, see style.css section 13) -->
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i> <span class="nav-toggle-label">Menu</span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     PAGE BANNER
+     ================================================================ -->
+<div class="page-banner">
+    <div class="container">
+        <h1>Publications</h1>
+        <p> Multimodal AI for scientific discovery and applications, 
+           developing models that reason across images, graphs, signals, sequences, and text. 
+        </p>
+    </div>
+</div>
+
+
+<!-- ================================================================
+     PUBLICATIONS LIST
+     HOW TO ADD A NEW PAPER:
+       1. Add a new .pub-year-heading if it's a new year.
+       2. Copy any .pub-list-item block.
+       3. Update: image src, title href, authors, year/venue,
+                  abstract, tags, Paper/Code/BibTeX links,
+                  and the data-bibtex key (must exist in js/main.js).
+       4. Add the BibTeX entry in js/main.js → bibtexEntries.
+
+     NAME HIGHLIGHT: Wrap your name in <strong class="self">
+                     wherever it appears in an author list.
+     ================================================================ -->
+<section class="page-content">
+    <div class="container">
+
+        <!-- ============================================================
+             YEAR: 2026
+             ============================================================ -->
+        <h2 class="pub-year-heading">2026</h2>
+
+        <!-- Publication: Every Wrong Answer Counts -->
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/EveryAnswer.png" alt="EveryAnswer figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2608.02966" target="_blank" rel="noopener">
+                        Every Wrong Answer Counts: Option-Level Psychometrics for LLM Multiple-Choice Benchmarks
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    X. Fei, Y. Zhang, <strong class="self">S.A. Carneiro</strong>, M. Vazirgiannis
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2026</span>
+                    <span class="sep">|</span>
+                    <span class="venue">arXiv preprint arXiv:2608.02966</span>
+                </p>
+                <p class="pub-abstract">
+                    Introduces LLM-NRM, an option-aware psychometric framework that models the full distribution over answer choices to jointly estimate LLM ability and option-level item characteristics.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Evaluation</span>
+                    <span class="tag">Psychometrics</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2608.02966" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="everywrong2026">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: The Masked Advantage -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/MaskedAdvantage.png" alt="Masked figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2606.07422" target="_blank" rel="noopener">
+                        The Masked Advantage: Uncovering Local-Language Access to Cultural Knowledge in LLMs
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    Y. Zhang, X. Fei, A. Mohamed, <strong class="self">S.A. Carneiro</strong>, M. Konomi, M. Geng, A. Asaad, G. Shang, M. Vazirgiannis
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2026</span>
+                    <span class="sep">|</span>
+                    <span class="venue">arXiv preprint arXiv:2606.07422</span>
+                </p>
+                <p class="pub-abstract">
+                    A controlled framework built on real-world cultural questions to study whether local cultural knowledge in LLMs is better accessed through English or through the local language.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Multilinguality</span>
+                    <span class="tag">Cultural Knowledge</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2606.07422" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="maskedadvantage2026">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: CARTE -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/carte.png" alt="carte figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2606.01995" target="_blank" rel="noopener">
+                        CARTE: A Benchmark for Mapping Language Model Knowledge Across France
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, C. Xypolopoulos, X. Fei, Y. Zhang, M. Vazirgiannis
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2026</span>
+                    <span class="sep">|</span>
+                    <span class="venue">arXiv preprint arXiv:2606.01995</span>
+                </p>
+                <p class="pub-abstract">
+                    A multiple-choice benchmark of 2,431 questions spanning the 13 metropolitan regions of France and 14 thematic domains, evaluating LLMs on fine-grained, regionally differentiated knowledge.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Benchmark</span>
+                    <span class="tag">Cultural Knowledge</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2606.01995" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="carte2026">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: PPI2Text -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/PPI2Text.png" alt="PPI2Text figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2605.08924" target="_blank" rel="noopener">
+                        PPI2Text: Captioning Protein-Protein Interactions with Coordinate-Aligned Pair-Map Decoding
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    X. Fei, <strong class="self">S.A. Carneiro</strong>, Y. Zhang, L.P. Petalidis, A. Tsortos, C. Bouyioukos, M. Vazirgiannis
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2026</span>
+                    <span class="sep">|</span>
+                    <span class="venue">arXiv preprint arXiv:2605.08924</span>
+                </p>
+                <p class="pub-abstract">
+                    A multimodal LLM for free-form captioning of protein-protein interactions directly from amino acid sequences, using coordinate-aligned pair-map decoding.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Protein Interaction</span>
+                    <span class="tag">Multimodal AI</span>
+                    <span class="tag">LLMs</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2605.08924" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <!-- UPDATE: Replace href="#" with the GitHub repo URL (or remove this link) -->
+                    <a href="#" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-rotate"></i> Code
+                    </a>
+                    <button class="pub-action" data-bibtex="ppi2text2026">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2025
+             ============================================================ -->
+        <h2 class="pub-year-heading">2025</h2>
+
+        <!-- Publication: Prot2Text-V2 -->
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/Prot2Text-V2.png" alt="Prot2Text-V2 figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2505.11194" target="_blank" rel="noopener">
+                        Prot2Text-V2: Protein Function Prediction with Multimodal Contrastive Alignment
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    X. Fei, M. Chatzianastasis, <strong class="self">S.A. Carneiro</strong>, H. Abdine, L.P. Petalidis, M. Vazirgiannis
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2025</span>
+                    <span class="sep">|</span>
+                    <span class="venue">arXiv preprint arXiv:2505.11194</span>
+                </p>
+                <p class="pub-abstract">
+                    A multimodal sequence-to-text model that generates free-form descriptions of protein function from amino acid sequences, combining an ESM-3B protein encoder with a LLaMA-3.1-8B decoder through contrastive alignment.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Protein</span>
+                    <span class="tag">Multimodal AI</span>
+                    <span class="tag">Contrastive Learning</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2505.11194" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <!-- UPDATE: Replace href="#" with the GitHub repo URL (or remove this link) -->
+                    <a href="#" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-rotate"></i> Code
+                    </a>
+                    <button class="pub-action" data-bibtex="prot2text2025">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2024
+             ============================================================ -->
+        <h2 class="pub-year-heading">2024</h2>
+
+        <!-- Publication: Clustering Dynamics for Improved Speed Prediction Deriving from Topographical GPS Registrations -->
+        <div class="pub-list-item">
+           <div class="pub-list-img">
+                <img src="Images/SelectedPublications/clusterDynamics.png" alt="Cluster figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2402.07507" target="_blank" rel="noopener">
+                        Clustering Dynamics for Improved Speed Prediction Deriving from Topographical GPS Registrations
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, G. Chierchia, A. Pirayre, L. Najman
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2024</span>
+                    <span class="sep">|</span>
+                    <span class="venue">arXiv preprint arXiv:2402.07507</span>
+                </p>
+                <p class="pub-abstract">
+                    Speed prediction from sparse GPS data and topographical / road-design features, aiming to predict traffic speed in regions with little or no transportation data.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Traffic Prediction</span>
+                    <span class="tag">Clustering</span>
+                    <span class="tag">Intelligent Transportation</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2402.07507" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="clustering2024">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: Prediction of mobility data with prior on the topography of an infrastructure of a road network -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+           <div class="pub-list-img">
+                <img src="Images/SelectedPublications/thesis.png" alt="Thesis figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Prediction+of+mobility+data+with+prior+on+the+topography+of+an+infrastructure+of+a+road+network%22" target="_blank" rel="noopener">
+                        Prediction of mobility data with prior on the topography of an infrastructure of a road network
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2024</span>
+                    <span class="sep">|</span>
+                    <span class="venue">PhD Thesis, Université Gustave Eiffel</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">PhD Thesis</span>
+                    <span class="tag">Traffic Prediction</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Prediction+of+mobility+data+with+prior+on+the+topography+of+an+infrastructure+of+a+road+network%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="phdthesis2024">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2023
+             ============================================================ -->
+        <h2 class="pub-year-heading">2023</h2>
+
+        <!-- Publication: SWMLP -->
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/SWMLP.png" alt="SWMLP figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://arxiv.org/abs/2310.02282" target="_blank" rel="noopener">
+                        SWMLP: Shared Weight Multilayer Perceptron for Car Trajectory Speed Prediction using Road Topographical Features
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, G. Chierchia, J. Charléty, A. Chataignon, L. Najman
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2023</span>
+                    <span class="sep">|</span>
+                    <span class="venue">8th International Conference on Models and Technologies for Intelligent Transportation Systems (MT-ITS)</span>
+                </p>
+                <p class="pub-abstract">
+                    A speed prediction method independent of large historical speed data, fitting a Shared Weight Multilayer Perceptron on the road topographical features of a vehicle's trajectory.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Traffic Prediction</span>
+                    <span class="tag">Urban Mobility</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://arxiv.org/abs/2310.02282" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <!-- UPDATE: Replace href="#" with the GitHub repo URL (or remove this link) -->
+                    <a href="#" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-rotate"></i> Code
+                    </a>
+                    <button class="pub-action" data-bibtex="swmlp2023">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2021
+             ============================================================ -->
+        <h2 class="pub-year-heading">2021</h2>
+
+        <!-- Publication: Graph-based supervoxel computation from iterative spanning forest -->
+        <div class="pub-list-item">
+        <div class="pub-list-img">
+                <img src="Images/SelectedPublications/supervoxel.png" alt="Supervoxel figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Graph-based+supervoxel+computation+from+iterative+spanning+forest%22" target="_blank" rel="noopener">
+                        Graph-based supervoxel computation from iterative spanning forest
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    C. Jerônimo, F. Belém, <strong class="self">S.A. Carneiro</strong>, Z.K.G. Patrocínio Jr, L. Najman, …
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2021</span>
+                    <span class="sep">|</span>
+                    <span class="venue">International Conference on Discrete Geometry and Mathematical Morphology (DGMM)</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Supervoxels</span>
+                    <span class="tag">Graphs</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Graph-based+supervoxel+computation+from+iterative+spanning+forest%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="supervoxel2021">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: High-Level Descriptors for Fall Event Detection Supported by a Multi-Stream Network -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+            <div class="pub-list-img pub-list-img--placeholder" aria-hidden="true">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22High-Level+Descriptors+for+Fall+Event+Detection+Supported+by+a+Multi-Stream+Network%22" target="_blank" rel="noopener">
+                        High-Level Descriptors for Fall Event Detection Supported by a Multi-Stream Network
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, S.J.F. Guimarães, H. Pedrini
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2021</span>
+                    <span class="sep">|</span>
+                    <span class="venue">International Journal of Electrical and Computer Engineering Systems, 12(1)</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Fall Detection</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22High-Level+Descriptors+for+Fall+Event+Detection+Supported+by+a+Multi-Stream+Network%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="falldescriptors2021">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2020
+             ============================================================ -->
+        <h2 class="pub-year-heading">2020</h2>
+
+        <!-- Publication: Anomalous action detection in videos assisted by high-level features using a multi-stream deep neural network -->
+        <div class="pub-list-item">
+            <div class="pub-list-img pub-list-img--placeholder" aria-hidden="true">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Anomalous+action+detection+in+videos+assisted+by+high-level+features+using+a+multi-stream+deep+neural+network%22" target="_blank" rel="noopener">
+                        Anomalous action detection in videos assisted by high-level features using a multi-stream deep neural network
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2020</span>
+                    <span class="sep">|</span>
+                    <span class="venue">MSc Thesis, Universidade Estadual de Campinas (UNICAMP)</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">MSc Thesis</span>
+                    <span class="tag">Video Understanding</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Anomalous+action+detection+in+videos+assisted+by+high-level+features+using+a+multi-stream+deep+neural+network%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="mscthesis2020">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2019
+             ============================================================ -->
+        <h2 class="pub-year-heading">2019</h2>
+
+        <!-- Publication: Fight detection in video sequences based on multi-stream convolutional neural networks -->
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/fightDetectionCNNs.png" alt="Fight detection in video sequences based on multi-stream convolutional neural networks figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Fight+detection+in+video+sequences+based+on+multi-stream+convolutional+neural+networks%22" target="_blank" rel="noopener">
+                        Fight detection in video sequences based on multi-stream convolutional neural networks
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, G.P. da Silva, S.J.F. Guimarães, H. Pedrini
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2019</span>
+                    <span class="sep">|</span>
+                    <span class="venue">32nd SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)</span>
+                </p>
+                <p class="pub-abstract">
+                    A multi-stream CNN approach for automatic detection of fight events in video sequences, combining spatial and temporal information streams.
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Video Understanding</span>
+                    <span class="tag">Action Detection</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Fight+detection+in+video+sequences+based+on+multi-stream+convolutional+neural+networks%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <!-- UPDATE: Replace href="#" with the GitHub repo URL (or remove this link) -->
+                    <a href="#" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-rotate"></i> Code
+                    </a>
+                    <button class="pub-action" data-bibtex="fight2019">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: Multi-stream deep convolutional network using high-level features applied to fall detection in video sequences -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+            <div class="pub-list-img pub-list-img--placeholder" aria-hidden="true">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Multi-stream+deep+convolutional+network+using+high-level+features+applied+to+fall+detection+in+video+sequences%22" target="_blank" rel="noopener">
+                        Multi-stream deep convolutional network using high-level features applied to fall detection in video sequences
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, G.P. da Silva, G.V. Leite, R. Moreno, S.J.F. Guimarães, H. Pedrini
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2019</span>
+                    <span class="sep">|</span>
+                    <span class="venue">International Conference on Systems, Signals and Image Processing (IWSSIP)</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Fall Detection</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Multi-stream+deep+convolutional+network+using+high-level+features+applied+to+fall+detection+in+video+sequences%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="fallssip2019">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publication: Deep Convolutional Multi-Stream Network Detection System Applied to Fall Identification in Video Sequences -->
+        <div class="pub-list-item" style="margin-top:1.25rem;">
+            <div class="pub-list-img pub-list-img--placeholder" aria-hidden="true">
+                <i class="fa-solid fa-file-lines"></i>
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Deep+Convolutional+Multi-Stream+Network+Detection+System+Applied+to+Fall+Identification+in+Video+Sequences%22" target="_blank" rel="noopener">
+                        Deep Convolutional Multi-Stream Network Detection System Applied to Fall Identification in Video Sequences
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, G.P. da Silva, G.V. Leite, R. Moreno, S.J.F. Guimarães, H. Pedrini
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2019</span>
+                    <span class="sep">|</span>
+                    <span class="venue">Machine Learning and Data Mining in Pattern Recognition (MLDM)</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Fall Detection</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Deep+Convolutional+Multi-Stream+Network+Detection+System+Applied+to+Fall+Identification+in+Video+Sequences%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="fallmldm2019">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ============================================================
+             YEAR: 2018
+             ============================================================ -->
+        <h2 class="pub-year-heading">2018</h2>
+
+        <!-- Publication: Image Inpainting Based on Local Patch Search Supported by Image Segmentation -->
+        <div class="pub-list-item">
+            <div class="pub-list-img">
+                <img src="Images/SelectedPublications/inpainting.png" alt="Inpainting figure">
+            </div>
+            <div class="pub-body">
+                <h3 class="pub-title">
+                    <a href="https://scholar.google.com/scholar?q=%22Image+Inpainting+Based+on+Local+Patch+Search+Supported+by+Image+Segmentation%22" target="_blank" rel="noopener">
+                        Image Inpainting Based on Local Patch Search Supported by Image Segmentation
+                    </a>
+                </h3>
+                <p class="pub-authors">
+                    <strong class="self">S.A. Carneiro</strong>, H. Pedrini, S.J.F. Guimarães
+                </p>
+                <p class="pub-meta">
+                    <span class="year">2018</span>
+                    <span class="sep">|</span>
+                    <span class="venue">Iberoamerican Congress on Pattern Recognition (CIARP)</span>
+                </p>
+                <div class="pub-tags" style="margin-bottom:0.75rem;">
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Image Inpainting</span>
+                </div>
+                <div class="pub-actions">
+                    <a href="https://scholar.google.com/scholar?q=%22Image+Inpainting+Based+on+Local+Patch+Search+Supported+by+Image+Segmentation%22" class="pub-action" target="_blank" rel="noopener">
+                        <i class="fa-regular fa-file-lines"></i> Paper
+                    </a>
+                    <button class="pub-action" data-bibtex="inpainting2018">
+                        <i class="fa-regular fa-file-code"></i> BibTeX
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             ADD NEW PAPERS HERE:
+             Copy any .pub-list-item block above, place it under the
+             right .pub-year-heading, and update all the fields.
+             Don't forget to add the BibTeX entry in js/main.js too.
+             ============================================================ -->
+
+    </div>
+</section><!-- /page-content -->
+
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-name">Sarah Carneiro</div>
+            <!-- UPDATE: Change role or institution as needed -->
+            <div class="footer-role">Post-doctoral Researcher — École Polytechnique</div>
+        </div>
+        <!-- UPDATE: Match these links to the hero social links above -->
+        <div class="footer-links">
+            <a href="mailto:sarah.alcar@gmail.com">
+                <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+<!-- BibTeX modal — required for the BibTeX buttons above -->
+<div class="modal-overlay" id="bibtex-modal" role="dialog" aria-modal="true" aria-label="BibTeX entry">
+    <div class="modal-box">
+        <button class="modal-close-x" onclick="closeModal()" aria-label="Close">&times;</button>
+        <h3>BibTeX</h3>
+        <pre id="bibtex-content"></pre>
+        <div class="modal-footer">
+            <button class="btn-copy" id="btn-copy">Copy BibTeX</button>
+            <button class="btn-close-modal" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

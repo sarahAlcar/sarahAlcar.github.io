@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UPDATE: Adjust title if needed -->
+    <title>Projects — Dr. Sarah Carneiro</title>
+    <meta name="description" content="Research projects and teaching activities of Sarah Carneiro.">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Category label above a group of project cards */
+        .proj-category {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--clr-text);
+            border-bottom: 2px solid var(--clr-border);
+            padding-bottom: 0.4rem;
+            margin: 2.5rem 0 1.2rem;
+        }
+        .proj-category:first-of-type { margin-top: 0; }
+    </style>
+</head>
+<body>
+
+<!-- ================================================================
+     NAVIGATION BAR — "Projects" is active
+     ================================================================ -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">Sarah Carneiro</a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="certificates.html" >Certificates</a></li>
+            <li><a href="teaching.html" >Teaching</a></li>
+        </ul>
+        <a href="PDFs/CV/CV_Sarah_CARNEIRO.pdf" class="btn-cv" download>
+            <i class="fa-solid fa-download"></i> Download CV
+        </a>
+        <!-- Mobile/tablet menu toggle (shown only on narrow screens, see style.css section 13) -->
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i> <span class="nav-toggle-label">Menu</span>
+        </button>
+    </div>
+</nav>
+
+
+<!-- ================================================================
+     PAGE BANNER
+     UPDATE: Edit heading and subtitle below.
+     ================================================================ -->
+<div class="page-banner">
+    <div class="container">
+        <h1>Projects</h1>
+        <p>An overview of ongoing and completed projects.</p> 
+    </div>
+</div>
+
+
+<!-- ================================================================
+     CONTENT
+     HOW TO ADD A NEW PROJECT:
+       1. Copy any .project-card block below.
+       2. Fill in: title, year (proj-year), role (proj-role),
+          description, tags, and links.
+       3. Place it under the right .proj-category heading.
+       4. Add/remove .proj-link anchors as needed.
+     ================================================================ -->
+<section class="page-content">
+    <div class="container">
+
+
+        <!-- ============================================================
+             RESEARCH PROJECTS
+             ============================================================ -->
+        <h2 class="proj-category">Ongoing Research Projects</h2>
+
+        
+        <!-- Project card -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Protein & Molecular Sequence/Structure-to-Text Generation</h3>
+                <span class="proj-year">2025 - </span>
+            </div>
+            <p class="proj-role">Researcher — DASciM Lab, École Polytechnique</p>
+            <p>
+                Development of multimodal generative models for translating protein sequences,
+                3D structures, and protein-protein interactions into natural language descriptions.
+                The work includes Prot2Text-V2 for protein function captioning, as well
+                as PPI2Text for structure-aware protein interaction captioning, combining structural
+                representations, multimodal alignment, and language modeling.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Protein AI</span>
+                <span class="tag">Molecular AI</span>
+                <span class="tag">Multimodal Learning</span>
+                <span class="tag">LLMs</span>
+            </div>
+            <!-- <div class="proj-links">
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines"></i> Papers
+                </a>
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                </a>
+            </div> -->
+        </div>
+
+        <!-- Project card 1 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Agentic AI for Constrained LLM Generation</h3>
+                <span class="proj-year">2026 – </span>
+            </div>
+            <p class="proj-role">Researcher — Supervised Research</p>
+            <p>
+                Investigation of agentic AI frameworks for constraining LLM generation according to
+                domain-specific requirements, with a focus on controllable generation, structured
+                outputs.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Agentic AI</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">Controllable Generation</span>
+            </div>
+            <!-- <div class="proj-links">
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines"></i> Paper
+                </a>
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                </a>
+            </div> -->
+        </div>
+
+
+        <!-- Project card 2 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Vision-Language Models for Medical Imaging</h3>
+                <span class="proj-year">2026 - </span>
+            </div>
+            <p class="proj-role">Researcher — Supervised Research</p>
+            <p>
+                Investigation of vision-language models for multimodal understanding of medical
+                imaging, exploring the integration of visual representations and language models
+                for medical image analysis and reasoning.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">VLMs</span>
+                <span class="tag">Medical AI</span>
+                <span class="tag">Multimodal Learning</span>
+            </div>
+            <!-- <div class="proj-links">
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines"></i> Paper
+                </a>
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                </a>
+            </div> -->
+        </div>
+
+
+        <!-- Project card 3 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>LLM Benchmarking Under Quantization</h3>
+                <span class="proj-year">2026 - </span>
+            </div>
+            <p class="proj-role">Researcher — Supervised Research</p>
+            <p>
+                Benchmarking of large language models under different quantization strategies,
+                evaluating the trade-offs between model efficiency, computational requirements,
+                and downstream performance.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">LLMs</span>
+                <span class="tag">Quantization</span>
+                <span class="tag">Model Efficiency</span>
+            </div>
+            <!-- <div class="proj-links">
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines"></i> Paper
+                </a>
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                </a>
+            </div> -->
+        </div>
+
+
+        <!-- Project card 4 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Synthetic Data Generation Frameworks</h3>
+                <span class="proj-year">2026 - </span>
+            </div>
+            <p class="proj-role">Researcher — Supervised Research</p>
+            <p>
+                Development of frameworks for synthetic dataset generation, with applications in
+                model training, evaluation, and data augmentation, investigating methods for producing
+                scalable and task-specific synthetic data.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Synthetic Data</span>
+                <span class="tag">Generative AI</span>
+                <span class="tag">Data Generation</span>
+            </div>
+            <!-- <div class="proj-links">
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines"></i> Paper
+                </a>
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                </a>
+            </div> -->
+        </div>
+
+      
+        <!-- Project card -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Cultural Evaluation & Alignment of Large Language Models</h3>
+                <span class="proj-year">2025 - </span>
+            </div>
+            <p class="proj-role">Researcher — DASciM Lab, École Polytechnique</p>
+            <p>
+                Research on evaluating and understanding the cultural biases, values, and behavioral
+                differences encoded by large language models. Contributed to research on cultural
+                evaluation and culturally grounded model behavior through <i>CARTE</i>,
+                <i>Masked Advantage</i>, and <i>Every Answer Counts</i>, investigating how LLMs
+                respond to culturally diverse contexts and how their evaluations can be made more
+                representative and reliable across cultures.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">LLMs</span>
+                <span class="tag">Cultural AI</span>
+                <span class="tag">AI Evaluation</span>
+                <span class="tag">Bias & Alignment</span>
+            </div>
+            <!-- <div class="proj-links">
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-regular fa-file-lines"></i> Papers
+                </a>
+                <a href="#" class="proj-link" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-github"></i> Code
+                </a>
+            </div> -->
+        </div>
+
+
+
+
+       
+     
+
+
+
+        <!-- ADD NEW RESEARCH PROJECTS HERE by copying a .project-card block above -->
+
+
+        <!-- ============================================================
+             SUPERVISION
+             ============================================================ -->
+        <h2 class="proj-category">Finished projects</h2>
+
+        <!-- UPDATE: Add/edit student supervision entries below -->
+         <!-- Project card 5 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Deepfake Image Detection</h3>
+                <span class="proj-year">2024</span>
+            </div>
+            <p class="proj-role">Supervised Research</p>
+            <p>
+                Investigation of computer vision methods for detecting and classifying AI-generated
+                and manipulated images, focusing on visual artifacts and discriminative representations
+                for reliable deepfake detection.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Deepfakes</span>
+                <span class="tag">Image Classification</span>
+            </div>
+        </div>
+
+
+        <!-- Project card 6 -->
+        <div class="project-card">
+            <div class="proj-header">
+                <h3>Computer Vision for Agricultural Disease Detection</h3>
+                <span class="proj-year">2024 </span>
+            </div>
+            <p class="proj-role">Supervised Research</p>
+            <p>
+                Development of computer vision approaches for automated identification and
+                classification of agricultural plant diseases from leaf imagery, investigating
+                image-based representations for robust disease recognition.
+            </p>
+            <div class="pub-tags" style="margin-bottom:0.8rem;">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">Agricultural AI</span>
+                <span class="tag">Image Classification</span>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+</section><!-- /page-content -->
+
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-name">Sarah Carneiro</div>
+            <!-- UPDATE: Change role or institution as needed -->
+            <div class="footer-role">Post-doctoral Researcher — École Polytechnique</div>
+        </div>
+        <!-- UPDATE: Match these links to the hero social links above -->
+        <div class="footer-links">
+            <a href="mailto:sarah.alcar@gmail.com">
+                <i class="fa-regular fa-envelope"></i> Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=qd-Vs70AAAAJ&amp;hl=en" target="_blank" rel="noopener">
+                <i class="fa-solid fa-graduation-cap"></i> Google Scholar
+            </a>
+            <a href="https://www.linkedin.com/in/sarah-carneiro-182a79a8/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

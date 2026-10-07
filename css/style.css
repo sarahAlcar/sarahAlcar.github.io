@@ -1,0 +1,857 @@
+/* ================================================================
+   PROFESSIONAL WEBSITE — Shared Stylesheet
+   Author: Sarah Carneiro
+   ================================================================
+
+   QUICK CUSTOMIZATION GUIDE
+   --------------------------
+   Colors      → Edit :root variables in section 1 below
+   Fonts       → Change --font and the Google Fonts <link> in HTML
+   Page width  → Change --max-w
+   Navbar/logo → .navbar, .nav-logo (section 5)
+   Hero layout → .hero (section 6)
+   Cards       → .research-card (section 7), .pub-card (section 8)
+   Footer      → .footer (section 10)
+   Responsive  → @media blocks at the bottom (section 13)
+   ================================================================ */
+
+
+/* ----------------------------------------------------------------
+   1. CSS VARIABLES — Change here to restyle the whole site
+   ---------------------------------------------------------------- */
+:root {
+    /* Core palette */
+    --clr-dark:        #041832;   /* Navbar + footer background          */
+    --clr-accent:      #0dbcae;   /* Teal — links, underlines, bullets   */
+    --clr-accent-dim:  #008f84;   /* Darker teal for hover states        */
+    --clr-white:       #ffffff;
+    --clr-bg:          #f4f7fa;   /* Off-white page background           */
+    --clr-card:        #ffffff;   /* Card / panel background             */
+
+    /* Text shades */
+    --clr-text:        #1e293b;   /* Primary body text                   */
+    --clr-text-2:      #475569;   /* Secondary / metadata text           */
+    --clr-text-3:      #94a3b8;   /* Light / disabled text               */
+    --clr-text-nav:    #cbd5e1;   /* Text on dark navbar                 */
+
+    /* Borders & surfaces */
+    --clr-border:      #e2e8f0;
+    --clr-card-border: #e8eef5;
+
+    /* Tag pills */
+    --clr-tag-bg:      #dff3f1;
+    --clr-tag-text:    #007a6e;
+
+    /* Layout */
+    --max-w:    1100px;           /* Maximum content width               */
+    --nav-h:    64px;             /* Navbar height                       */
+    --font:     'Inter', system-ui, sans-serif;
+    --r:        10px;             /* Default border-radius               */
+    --r-sm:     6px;
+    --shadow:       0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
+    --shadow-hover: 0 4px 14px rgba(0,0,0,0.12), 0 8px 32px rgba(0,0,0,0.07);
+}
+
+
+/* ----------------------------------------------------------------
+   2. RESET & BASE
+   ---------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  {
+    font-family: var(--font);
+    color: var(--clr-text);
+    background: var(--clr-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+img   { max-width: 100%; display: block; }
+a     { color: inherit; text-decoration: none; }
+ul    { list-style: none; }
+
+
+/* ----------------------------------------------------------------
+   3. TYPOGRAPHY UTILITIES
+   ---------------------------------------------------------------- */
+
+/* Section heading + teal underbar */
+.section-title { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.3rem; }
+.section-bar   { width: 40px; height: 3px; background: var(--clr-accent);
+                 border-radius: 2px; margin-bottom: 1.75rem; }
+
+/* Keyword tag pills (appear under research cards + publications) */
+.tag {
+    display: inline-block;
+    background: var(--clr-tag-bg);
+    color: var(--clr-tag-text);
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin: 2px 2px 0 0;
+    white-space: nowrap;
+}
+
+
+/* ----------------------------------------------------------------
+   4. LAYOUT UTILITIES
+   ---------------------------------------------------------------- */
+.container {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Row with title on left, "see more" link on right */
+.section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.see-more {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--clr-accent);
+    white-space: nowrap;
+    transition: color 0.2s;
+    padding-bottom: 0.2rem;
+}
+.see-more:hover { color: var(--clr-accent-dim); }
+
+
+/* ----------------------------------------------------------------
+   5. NAVIGATION BAR
+   UPDATE: Edit the <nav> block in each HTML file to change links.
+           The active page gets class="active" on its <a> tag.
+   ---------------------------------------------------------------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--clr-dark);
+    height: var(--nav-h);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.nav-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* UPDATE: Change the brand name in <a class="nav-logo"> in HTML */
+.nav-logo {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0 auto;   /* Push CV button to the right */
+}
+
+.nav-links a {
+    color: var(--clr-text-nav);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.45rem 0.9rem;
+    transition: color 0.2s;
+    position: relative;
+}
+.nav-links a:hover  { color: var(--clr-white); }
+.nav-links a.active {
+    color: var(--clr-white);
+    /* Teal underline on the active link */
+    box-shadow: inset 0 -2px 0 var(--clr-accent);
+}
+
+/* "Download CV" button in navbar */
+/* UPDATE: Change the href in HTML to point to your CV file */
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--clr-accent);
+    color: var(--clr-white) !important;
+    font-size: 0.83rem;
+    font-weight: 600;
+    padding: 0.45rem 1.1rem;
+    border-radius: var(--r-sm);
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.15s;
+}
+.btn-cv:hover { background: var(--clr-accent-dim); transform: translateY(-1px); }
+
+/* "Menu" dropdown toggle — hidden on wide screens, shown when the
+   nav links no longer fit (see the 960px block in section 13) */
+.nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.45rem;
+    background: transparent;
+    color: var(--clr-white);
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: var(--r-sm);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+.nav-toggle:hover,
+.navbar.nav-open .nav-toggle { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+.nav-toggle i { width: 1em; text-align: center; }
+
+
+
+
+/* ----------------------------------------------------------------
+   6. HERO SECTION (Home page only)
+   UPDATE: Photo      → src in <img class="hero-photo-img">
+           Name       → <h1 class="hero-name">
+           Title      → <p class="hero-label">
+           Subtitle   → <p class="hero-subtitle">
+           Bio        → <p class="hero-bio">
+           Socials    → each <a class="social-link"> href
+           Affiliations → <img class="affil-logo"> src
+   ---------------------------------------------------------------- */
+.hero {
+    background: var(--clr-white);
+    padding: 4rem 0 2.5rem;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--clr-border);
+}
+
+/* Decorative wave SVG positioned top-right */
+.hero-wave {
+    position: absolute;
+    top: 0; right: 0;
+    width: 46%;
+    height: 100%;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.hero-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Circular photo frame */
+.hero-photo {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--clr-border);
+    background: #dde5ef;
+}
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-content { flex: 1; min-width: 0; }
+
+.hero-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--clr-accent);
+    margin-bottom: 0.4rem;
+}
+
+.hero-name {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.35rem;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--clr-text-2);
+    margin-bottom: 0.9rem;
+}
+
+.hero-bio {
+    font-size: 0.91rem;
+    color: var(--clr-text-2);
+    line-height: 1.75;
+    max-width: 540px;
+    margin-bottom: 1.5rem;
+}
+
+/* Email / Google Scholar / LinkedIn row */
+.hero-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    flex-wrap: wrap;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    color: var(--clr-text-2);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.social-link:hover { color: var(--clr-accent); }
+
+/* "Affiliations" row below the main hero content */
+.hero-affiliations {
+    max-width: var(--max-w);
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+.affil-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--clr-accent);
+}
+/* UPDATE: Change src of each <img class="affil-logo"> for different logos */
+.affil-logo {
+    height: 34px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+.affil-logo:hover { opacity: 1; }
+
+
+/* ----------------------------------------------------------------
+   7. RESEARCH INTERESTS SECTION
+   UPDATE: Edit the four .research-card blocks in index.html.
+           For the full research page, edit research.html.
+   ---------------------------------------------------------------- */
+.research-section {
+    padding: 3.5rem 0;
+    background: var(--clr-bg);
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.research-card {
+    background: var(--clr-card);
+    border: 1px solid var(--clr-card-border);
+    border-radius: var(--r);
+    padding: 1.4rem;
+    position: relative;
+}
+
+/* "01", "02", "03", "04" badge in card corner */
+.card-num {
+    position: absolute;
+    top: 1rem; right: 1.2rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--clr-border);
+}
+
+.card-icon {
+    font-size: 1.6rem;
+    color: var(--clr-accent);
+    margin-bottom: 0.8rem;
+}
+
+.research-card h3  { font-size: 0.97rem; font-weight: 700; margin-bottom: 0.4rem; }
+.research-card p   { font-size: 0.81rem; color: var(--clr-text-2); line-height: 1.55;
+                     margin-bottom: 0.7rem; }
+.research-card .tags { display: flex; flex-wrap: wrap; gap: 3px; }
+
+
+/* ----------------------------------------------------------------
+   8. SELECTED PUBLICATIONS SECTION
+   UPDATE: Edit each .pub-card in index.html (3 cards shown).
+           Full list of all publications lives in publications.html.
+           PAPER LINKS: Find "href=" inside each .pub-action and
+           replace "#" with the real URL.
+   ---------------------------------------------------------------- */
+.publications-section {
+    padding: 3.5rem 0;
+    background: var(--clr-white);
+    border-top: 1px solid var(--clr-border);
+}
+
+/* 3-column grid on homepage */
+.pub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.pub-card {
+    background: var(--clr-card);
+    border: 1px solid var(--clr-card-border);
+    border-radius: var(--r);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.pub-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+
+.pub-img-wrap {
+    width: 100%;
+    height: 155px;
+    overflow: hidden;
+    background: #edf2f7;
+    flex-shrink: 0;
+}
+.pub-img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.35s;
+}
+.pub-card:hover .pub-img-wrap img { transform: scale(1.04); }
+
+.pub-body {
+    padding: 1.15rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Paper title — coloured so it reads as a link */
+.pub-title {
+    font-size: 0.93rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--clr-accent-dim);
+    margin-bottom: 0.45rem;
+}
+.pub-title a:hover { text-decoration: underline; }
+
+.pub-authors {
+    font-size: 0.79rem;
+    color: var(--clr-text-2);
+    margin-bottom: 0.2rem;
+    line-height: 1.45;
+}
+/* UPDATE: Wrap the page-owner's name with <strong class="self"> */
+.pub-authors .self { font-weight: 700; color: var(--clr-text); }
+
+.pub-meta {
+    font-size: 0.77rem;
+    color: var(--clr-text-3);
+    margin-bottom: 0.7rem;
+}
+.pub-meta .year   { font-weight: 600; color: var(--clr-text-2); }
+.pub-meta .sep    { margin: 0 0.35rem; }
+.pub-meta .venue  { font-style: italic; }
+
+.pub-abstract {
+    font-size: 0.8rem;
+    color: var(--clr-text-2);
+    line-height: 1.6;
+    margin-bottom: 0.7rem;
+    flex: 1;
+}
+
+.pub-tags { margin-bottom: 0.9rem; }
+
+/* Paper / Code / BibTeX row */
+.pub-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-top: 0.7rem;
+    border-top: 1px solid var(--clr-border);
+    flex-wrap: wrap;
+}
+.pub-action {
+    display: flex;
+    align-items: center;
+    gap: 0.28rem;
+    font-size: 0.79rem;
+    color: var(--clr-text-2);
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+.pub-action:hover { color: var(--clr-accent); }
+.pub-arrow {
+    margin-left: auto;
+    color: var(--clr-accent);
+    font-size: 0.95rem;
+}
+
+
+/* ----------------------------------------------------------------
+   9. SUPERVISION & EXTRA-CURRICULAR SECTION
+   UPDATE: Edit bullet points in <ul class="supervision-list">
+           Edit extra-curricular items in <div class="extra-item">
+   ---------------------------------------------------------------- */
+.bottom-sections {
+    padding: 3.5rem 0;
+    background: var(--clr-bg);
+    border-top: 1px solid var(--clr-border);
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Left column: bullet list */
+.supervision-list { margin-top: 1rem; }
+.supervision-list li {
+    padding: 0.35rem 0 0.35rem 1.3rem;
+    font-size: 0.875rem;
+    color: var(--clr-text-2);
+    position: relative;
+}
+.supervision-list li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 8px; height: 8px;
+    background: var(--clr-accent);
+    border-radius: 50%;
+}
+.see-more-inline {
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--clr-accent);
+    transition: color 0.2s;
+}
+.see-more-inline:hover { color: var(--clr-accent-dim); }
+
+/* Right column: icon + text rows */
+.extra-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9rem;
+    margin-bottom: 1.3rem;
+}
+.extra-icon-box {
+    width: 40px; height: 40px;
+    flex-shrink: 0;
+    background: var(--clr-white);
+    border: 1px solid var(--clr-border);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    color: var(--clr-accent);
+}
+.extra-info h4 {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--clr-accent-dim);
+    margin-bottom: 0.15rem;
+}
+.extra-info p { font-size: 0.81rem; color: var(--clr-text-2); }
+
+
+/* ----------------------------------------------------------------
+   10. FOOTER
+   UPDATE: Edit the <footer> block in each HTML file.
+   ---------------------------------------------------------------- */
+.footer {
+    background: var(--clr-dark);
+    padding: 1.4rem 0;
+}
+.footer-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer-brand .footer-name  { font-size: 0.9rem; font-weight: 600; color: var(--clr-white); }
+.footer-brand .footer-role  { font-size: 0.78rem; color: var(--clr-text-3); margin-top: 0.1rem; }
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+.footer-links a {
+    display: flex; align-items: center; gap: 0.35rem;
+    font-size: 0.82rem;
+    color: var(--clr-text-nav);
+    transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--clr-accent); }
+
+
+/* ----------------------------------------------------------------
+   11. SUB-PAGE ELEMENTS (Research, Publications, Projects)
+   ---------------------------------------------------------------- */
+
+/* Dark banner at the top of each sub-page */
+.page-banner {
+    background: var(--clr-dark);
+    padding: 3rem 0;
+    border-bottom: 3px solid var(--clr-accent);
+}
+.page-banner h1 { font-size: 2rem; font-weight: 700; color: var(--clr-white); margin-bottom: 0.4rem; }
+.page-banner p  { font-size: 0.95rem; color: var(--clr-text-3); max-width: 540px; }
+
+/* Sub-page content wrapper */
+.page-content { padding: 3.5rem 0; }
+
+/* Research page — expanded area blocks */
+.research-area {
+    background: var(--clr-card);
+    border: 1px solid var(--clr-card-border);
+    border-radius: var(--r);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    gap: 1.75rem;
+    align-items: flex-start;
+    transition: box-shadow 0.2s;
+}
+.research-area:hover { box-shadow: var(--shadow-hover); }
+.research-area-icon  { font-size: 2.2rem; color: var(--clr-accent); flex-shrink: 0; margin-top: 0.2rem; }
+.research-area h3    { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+.research-area p     { font-size: 0.88rem; color: var(--clr-text-2); line-height: 1.7; margin-bottom: 0.7rem; }
+.research-area ul    { padding-left: 1.1rem; margin-bottom: 0.7rem; }
+.research-area ul li { font-size: 0.85rem; color: var(--clr-text-2); margin-bottom: 0.25rem; list-style: disc; }
+
+/* Publications page — horizontal list layout */
+.pub-list-item {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 1.4rem;
+    background: var(--clr-card);
+    border: 1px solid var(--clr-card-border);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.pub-list-item:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+.pub-list-img {
+    width: 100%; height: 115px; border-radius: var(--r-sm);
+    overflow: hidden; background: #edf2f7; flex-shrink: 0;
+}
+.pub-list-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Projects page */
+.project-card {
+    background: var(--clr-card);
+    border: 1px solid var(--clr-card-border);
+    border-radius: var(--r);
+    padding: 1.75rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.2s;
+}
+.project-card:hover { box-shadow: var(--shadow-hover); }
+.project-card .proj-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; margin-bottom: 0.5rem;
+}
+.project-card h3  { font-size: 1.05rem; font-weight: 700; color: var(--clr-accent-dim); }
+.project-card .proj-year { font-size: 0.78rem; color: var(--clr-text-3); white-space: nowrap; }
+.project-card .proj-role { font-size: 0.8rem; color: var(--clr-accent); font-weight: 600;
+                           margin-bottom: 0.6rem; }
+.project-card p   { font-size: 0.875rem; color: var(--clr-text-2); line-height: 1.65; margin-bottom: 0.75rem; }
+.proj-links { display: flex; gap: 1rem; }
+.proj-link  {
+    display: inline-flex; align-items: center; gap: 0.3rem;
+    font-size: 0.8rem; font-weight: 500; color: var(--clr-text-2);
+    transition: color 0.2s;
+}
+.proj-link:hover { color: var(--clr-accent); }
+
+
+/* ----------------------------------------------------------------
+   12. BIBTEX MODAL
+   ---------------------------------------------------------------- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 20, 30, 0.55);
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.modal-overlay.open { display: flex; }
+
+.modal-box {
+    background: var(--clr-white);
+    border-radius: var(--r);
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+.modal-box h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 1rem; }
+.modal-box pre {
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--r-sm);
+    padding: 0.9rem 1rem;
+    font-size: 0.76rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: var(--clr-text-2);
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+}
+.modal-footer { display: flex; gap: 0.75rem; align-items: center; }
+.btn-copy {
+    background: var(--clr-accent);
+    color: white;
+    border: none; border-radius: var(--r-sm);
+    padding: 0.5rem 1.1rem;
+    font-size: 0.83rem; font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+.btn-copy:hover { background: var(--clr-accent-dim); }
+.btn-close-modal {
+    background: none; border: 1px solid var(--clr-border);
+    border-radius: var(--r-sm); padding: 0.5rem 1rem;
+    font-size: 0.83rem; color: var(--clr-text-2);
+    cursor: pointer; font-family: inherit;
+    transition: border-color 0.2s, color 0.2s;
+}
+.btn-close-modal:hover { border-color: var(--clr-text-2); color: var(--clr-text); }
+
+/* X button top-right */
+.modal-close-x {
+    position: absolute; top: 1rem; right: 1rem;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.2rem; color: var(--clr-text-3); line-height: 1;
+    transition: color 0.2s;
+}
+.modal-close-x:hover { color: var(--clr-text); }
+
+
+/* ----------------------------------------------------------------
+   13. RESPONSIVE BREAKPOINTS
+   ---------------------------------------------------------------- */
+
+/* Medium screens (tablet) */
+@media (max-width: 1100px) {
+    .pub-grid          { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+    .research-grid     { grid-template-columns: repeat(2, 1fr); }
+    .pub-grid          { grid-template-columns: 1fr 1fr; }
+    .bottom-grid       { grid-template-columns: 1fr; gap: 2.5rem; }
+    .pub-list-item     { grid-template-columns: 1fr; }
+    .pub-list-img      { height: 180px; }
+    .research-area     { flex-direction: column; }
+}
+
+/* Collapsed navbar — the links don't fit below ~930px, so they move
+   into a dropdown opened by the "Menu" button (logic in js/main.js) */
+@media (max-width: 960px) {
+    .nav-inner         { gap: 0.75rem; }
+    .btn-cv            { margin-left: auto; }
+    .nav-toggle        { display: inline-flex; }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        padding: 0.5rem 0;
+        background: var(--clr-dark);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    .navbar.nav-open .nav-links { display: flex; }
+    .nav-links a {
+        display: block;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    .nav-links a:hover  { background: rgba(255,255,255,0.05); }
+    .nav-links a.active { box-shadow: inset 3px 0 0 var(--clr-accent); }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+    .hero-inner        { flex-direction: column; align-items: center; text-align: center; }
+    .hero-name         { font-size: 2rem; }
+    .hero-socials      { justify-content: center; }
+    .hero-affiliations { justify-content: center; }
+    .hero-bio          { margin: 0 auto 1.5rem; }
+    .research-grid     { grid-template-columns: 1fr; }
+    .pub-grid          { grid-template-columns: 1fr; }
+    .nav-inner         { padding: 0 1rem; }
+    .section-title     { font-size: 1.4rem; }
+}
+
+/* Phones — tighten the navbar so logo, CV button and Menu fit on one row */
+@media (max-width: 480px) {
+    .nav-inner         { gap: 0.5rem; }
+    .nav-logo          { font-size: 0.95rem; }
+    .btn-cv            { padding: 0.4rem 0.7rem; font-size: 0.8rem; }
+    .btn-cv i          { display: none; }
+    .nav-toggle        { padding: 0.4rem 0.6rem; }
+}
+
+/* Very narrow phones — Menu button shows only the icon */
+@media (max-width: 359px) {
+    .nav-toggle-label  { display: none; }
+}
